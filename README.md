@@ -1,5 +1,3 @@
-# modods-test-1
-
 ## Project setup
 ```
 yarn install
