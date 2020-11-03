@@ -1,0 +1,188 @@
+#app 
+  font-family: "Avenir", Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: center
+  color: #000000
+  margin-top: 20px
+
+.form__group
+  position: relative
+  padding: 15px 25% 0
+  margin-top: 10px
+  width: 50%
+
+.form__field
+  font-family: inherit
+  width: 100%
+  border: 0
+  border-bottom: 2px solid #9b9b9b
+  outline: 0
+  font-size: 1.3rem
+
+  padding: 7px 0
+  background: transparent
+  transition: border-color 0.2s
+
+  &::placeholder
+    color: transparent
+
+  &:placeholder-shown ~ .form__label
+    font-size: 1.3rem
+    cursor: text
+    top: 20px
+
+.form__label
+  position: absolute
+  top: 0
+  display: block
+  transition: 0.2s
+  font-size: 1rem
+  color: #9b9b9b
+
+.form__field
+  &:focus
+    padding-bottom: 6px
+    font-weight: 700
+    border-width: 3px
+    border-image: linear-gradient(to right, #0d2699, #5b71d4)
+    border-image-slice: 1
+
+    ~ .form__label
+      position: absolute
+      top: 0
+      display: block
+      transition: 0.2s
+      font-size: 1rem
+      color: #5b71d4
+      font-weight: 700
+
+  &:required, &:invalid
+    box-shadow: none
+
+.radio 
+	margin: 16px 0 
+	display: flex
+	cursor: pointer
+	input 
+		display: none 
+		& + span 
+			line-height: 22px 
+      color: blue
+			height: 22px 
+			padding-left: 22px 
+			display: block 
+			position: relative 
+			&:not(:empty) 
+				padding-left: 30px 
+			&:before 
+				background: #d1d7e3 
+				transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2) 
+			&:after 
+				background: #fff 
+				transform: scale(0.78) 
+				transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4) 
+		&:checked 
+			& + span 
+				&:before 
+					transform: scale(1.04) 
+					background: #5d9bfb 
+				&:after 
+					transform: scale(0.4) 
+					transition: transform 0.3s ease 
+	&:hover 
+		input 
+			& + span 
+				&:before 
+					transform: scale(0.92) 
+				&:after 
+					transform: scale(0.74) 
+			&:checked 
+				& + span 
+					&:after 
+						transform: scale(0.4) 
+
+.radio input + span:before, .radio input + span:after 
+	content: '' 
+	width: 22px 
+	height: 22px 
+	display: block 
+	border-radius: 50% 
+	left: 0 
+	top: 0 
+	position: absolute 
+
+.container 
+	display: flex
+	position: relative 
+	padding-left: 35px 
+	margin-top: 15px 
+	cursor: pointer 
+	font-size: 18px 
+	-webkit-user-select: none 
+	-moz-user-select: none 
+	-ms-user-select: none 
+	user-select: none 
+	input 
+		position: absolute 
+		opacity: 0 
+		cursor: pointer 
+		height: 0 
+		width: 0 
+		&:checked 
+			& ~ .checkmark 
+				background-color: #2196F3 
+				&:after 
+					display: block 
+	&:hover 
+		input 
+			& ~ .checkmark 
+				background-color: #ccc 
+	.checkmark 
+		&:after 
+			left: 9px 
+			top: 5px 
+			width: 5px 
+			height: 10px 
+			border: solid white 
+			border-width: 0 3px 3px 0 
+			-webkit-transform: rotate(45deg) 
+			-ms-transform: rotate(45deg) 
+			transform: rotate(45deg) 
+.checkmark 
+	position: absolute 
+	top: 0 
+	left: 0 
+	height: 25px 
+	width: 25px 
+	background-color: #eee 
+	&:after 
+		content: "" 
+		position: absolute 
+		display: none 
+
+.main_form
+  margin: 0 25% 0 25%
+  width: 50%
+  border: 2px solid #191b1f
+  border-radius: 20px
+
+.SubBut  
+  margin-bottom: 10px
+  background-color: #4c73c9
+  border: none
+  color: white
+  padding: 16px 32px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 16px
+  transition-duration: 0.4s
+  cursor: pointer
+  border-radius: 25px
+  background-color: white
+  color: black
+  border: 2px solid #4c73c9
+  &:hover 
+    background-color: #4c73c9
+    color: white
